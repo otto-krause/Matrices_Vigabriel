@@ -2,21 +2,21 @@
 
 int main(){
  int a[2][3];
- for(int I = 0; I < 2; I++){
- for (int F = 0; F < 3; F++){
- printf("Escriba el valor de la fila %d y la columna %d: ", I+1, F+1);
- scanf("%d", &a[I][F]);
+ for(int i = 0; i < 2; i++){
+ for (int f = 0; f < 3; f++){
+ printf("Escriba el valor de la fila %d y la columna %d: ", i+1, f+1);
+ scanf("%d", &a[i][f]);
 }
 }
- for(int I = 0; I < 3; I++){
- a[0][I] *= 4;
+ for(int i = 0; i < 3; i++){
+ a[0][i] *= 4;
 }
- for(int I = 0; I < 3; I++){
- a[1][I] *= 3;
+ for(int i = 0; i < 3; i++){
+ a[1][i] *= 3;
 }
- for(int I = 0; I < 2; I++){
- for (int F = 0; F < 3; F++){
- printf("%d\t", a[I][F]);
+ for(int i = 0; i < 2; i++){
+ for (int f = 0; f < 3; f++){
+ printf("%d\t", a[i][f]);
 }
  putchar('\n');
 }
