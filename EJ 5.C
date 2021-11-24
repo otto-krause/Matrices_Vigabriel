@@ -1,12 +1,16 @@
 #include <stdio.h>
 
- void mostrar(int ** x){
- printf("\t1er T\t2do T\t3er T");
- for(int i = 0; i < 100; i++){
- printf("%d:\t", i);
- for (int f = 0; f < 3; f++){
- printf("%d\t", a[f][i]);
+ void mostrar(int g, int h, int x[g][h]){
+ printf("\T1er T\T2do T\T3er T\TPromedio");
+ int p;
+ for(int i = 0; i < h; i++){
+ p=0;
+ printf("%d :\t", i);
+ for (int f = 0; f < g; f++){
+ printf("%d\t", x[f][i]);
+ p+=x[f][i];
 }
+ printf("%d", p/3);
  putchar('\n');
 }
 }
@@ -18,20 +22,21 @@
  scanf("%d", &a[i][f]);
 }
 }
- Mostrar(a);
- char resp[2];
+ mostrar(3, 100, a);
+ char resp[3];
  for(;;){
  printf("Quiere cambiar un dato ?");
  scanf("%s", &resp);
- if(resp == "SI" || resp == "si"){
+ if(resp[0] == 'S' || resp[0] == 's'){
  printf("Escriba el numero de legajo del alumno, el trimestre a corregir y la nueva nota: ");
- int t,a,n;
- scanf("%d %d %d", &a, &t, &n);
- a[t][a] = n;
- Mostrar(a);
+ int T,V,N;
+ scanf("%d %d %d", &V, &T, &N);
+ a[T][V] = n;
+ mostrar(3, 100, a);
 }
  else
  break;
 }
+        
  return 0;
 }
