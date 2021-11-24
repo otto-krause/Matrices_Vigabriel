@@ -1,7 +1,7 @@
 #include <stdio.h>
 
  void mostrar(int g, int h, int x[g][h]){
- printf("\T1er T\T2do T\T3er T\TPromedio");
+ printf("\t1 T\t2 T\t3 T\tPromedio");
  int p;
  for(int i = 0; i < h; i++){
  p=0;
